@@ -2,140 +2,33 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guardianes del Manglar - La Guajira</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Guardianes del Manglar</title>
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            background-color: #f0f7f4;
-            color: #1b4332;
-        }
-
-        /* Encabezado con imagen de zona verde */
-        header {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1544551763-47a184230181?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
-            height: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-        }
-
-        .container { padding: 20px; max-width: 900px; margin: auto; }
-
-        .card-container { display: flex; gap: 20px; justify-content: center; margin-top: -50px; flex-wrap: wrap; }
-        
-        .card {
-            background: white;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-            width: 250px;
-            text-align: center;
-        }
-
-        /* Botón de PDF Estilizado */
-        .btn-download {
-            background-color: #40916c;
-            color: white;
-            padding: 15px 25px;
-            text-decoration: none;
-            border-radius: 30px;
-            display: inline-block;
-            margin: 20px 0;
-            font-weight: 600;
-            box-shadow: 0 4px 15px rgba(64,145,108,0.3);
-        }
-
-        .section {
-            background: white;
-            padding: 30px;
-            border-radius: 20px;
-            margin: 30px 0;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-
-        /* Formulario Ambiental */
-        form { display: flex; flex-direction: column; }
-        input, textarea {
-            padding: 12px;
-            margin-bottom: 15px;
-            border: 1px solid #d8f3dc;
-            border-radius: 8px;
-            font-family: inherit;
-        }
-
-        .btn-report {
-            background-color: #1b4332;
-            color: white;
-            padding: 15px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: 600;
-        }
-
-        .green-zone-img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 15px;
-            margin-top: 20px;
-        }
+        body { font-family: sans-serif; text-align: center; background-color: #f0f7f4; }
+        header { background: #1b4332; color: white; padding: 50px; }
+        .btn-download { background: #40916c; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; display: inline-block; margin-top: 20px; }
+        .section { padding: 40px; }
     </style>
 </head>
 <body>
-
     <header>
         <h1>Guardianes del Manglar</h1>
-        <p>Innovación y naturaleza para proteger Riohacha</p>
-        <a href="#reporte" class="btn-report" style="margin-top: 15px; text-decoration: none;">Ir a Reportar</a>
+        <p>Innovación para La Guajira</p>
     </header>
 
-    <div class="container">
-        <div class="card-container">
-            <div class="card">
-                <h3>Oxígeno</h3>
-                <p style="font-size: 24px; color: #40916c; font-weight: bold;">98% Óptimo</p>
-            </div>
-            <div class="card">
-                <h3>Mangles Plantados</h3>
-                <p style="font-size: 24px; color: #40916c; font-weight: bold;">1,340 unidades</p>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>📖 Manual del Guardián Ambiental</h2>
-            <p>Aprende las mejores prácticas para cuidar nuestro ecosistema costero. Desde la protección de raíces hasta la gestión de residuos.</p>
-            <center>
-                <a href="#" class="btn-download">⬇️ Descargar Manual del Medio Ambiente (PDF)</a>
-            </center>
-            <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="green-zone-img" alt="Zona verde">
-        </div>
-
-        <div id="reporte" class="section" style="background-color: #d8f3dc;">
-            <h2>📢 Enviar Reporte de Salud del Mangle</h2>
-            <p>Si ves basura, tala o cambios en el color del manglar, infórmanos aquí:</p>
-            
-            <form action="https://formspree.io/f/xnjyzndn" method="POST">
-                <input type="text" name="nombre" placeholder="Tu nombre" required>
-                <input type="email" name="email" placeholder="Tu correo electrónico" required>
-                <textarea name="mensaje" rows="4" placeholder="Describe lo que observaste en la zona verde..." required></textarea>
-                <button type="submit" class="btn-report">Enviar Reporte Ambiental</button>
-            </form>
-        </div>
+    <div class="section">
+        <h2>Manual del Guardián</h2>
+        <p>Descarga nuestra guía para cuidar el manglar:</p>
+        <a href="manual.pdf" class="btn-download" download>Descargar Manual (PDF)</a>
     </div>
 
-    <footer style="text-align: center; padding: 20px; color: #74c69d;">
-        <p>© 2024 Guardianes del Manglar - Riohacha, La Guajira</p>
-    </footer>
-
+    <div id="reporte" class="section">
+        <h2>Reportar Estado del Mangle</h2>
+        <form action="https://formspree.io/f/xnjyzndn" method="POST">
+            <input type="text" name="nombre" placeholder="Tu nombre" required><br><br>
+            <textarea name="mensaje" placeholder="Describe el problema..." required></textarea><br><br>
+            <button type="submit">Enviar Reporte</button>
+        </form>
+    </div>
 </body>
 </html>
