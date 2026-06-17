@@ -2,33 +2,51 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Guardianes del Manglar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardianes del Manglar - La Guajira</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: sans-serif; text-align: center; background-color: #f0f7f4; }
-        header { background: #1b4332; color: white; padding: 50px; }
-        .btn-download { background: #40916c; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; display: inline-block; margin-top: 20px; }
-        .section { padding: 40px; }
+        body { font-family: 'Poppins', sans-serif; margin: 0; background-color: #f0f7f4; color: #1b4332; }
+        header { 
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1544551763-47a184230181?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover; background-position: center; height: 400px;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            text-align: center; color: white;
+        }
+        .container { padding: 20px; max-width: 900px; margin: auto; }
+        .section { background: white; padding: 30px; border-radius: 20px; margin: 30px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .btn-download { background-color: #40916c; color: white; padding: 15px 25px; text-decoration: none; border-radius: 30px; display: inline-block; font-weight: 600; }
+        form { display: flex; flex-direction: column; }
+        input, textarea { padding: 12px; margin-bottom: 15px; border: 1px solid #d8f3dc; border-radius: 8px; }
+        .btn-report { background-color: #1b4332; color: white; padding: 15px; border: none; border-radius: 8px; cursor: pointer; font-size: 16px; }
+        .img-zona { width: 100%; height: 300px; object-fit: cover; border-radius: 15px; margin-top: 20px; }
     </style>
 </head>
 <body>
+
     <header>
         <h1>Guardianes del Manglar</h1>
-        <p>Innovación para La Guajira</p>
+        <p>Innovación y naturaleza para proteger Riohacha</p>
     </header>
 
-    <div class="section">
-        <h2>Manual del Guardián</h2>
-        <p>Descarga nuestra guía para cuidar el manglar:</p>
-        <a href="manual.pdf" class="btn-download" download>Descargar Manual (PDF)</a>
+    <div class="container">
+        <div class="section">
+            <h2>📖 Manual del Guardián Ambiental</h2>
+            <p>Descarga nuestra guía práctica sobre cómo cuidar el medio ambiente y proteger las raíces del manglar.</p>
+            <a href="manual.pdf" class="btn-download" download>⬇️ Descargar Manual PDF</a>
+            <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="img-zona" alt="Zona verde">
+        </div>
+
+        <div id="reporte" class="section" style="background-color: #d8f3dc;">
+            <h2>📢 Enviar Reporte de Salud del Mangle</h2>
+            <form action="https://formspree.io/f/xnjyzndn" method="POST">
+                <input type="text" name="nombre" placeholder="Tu nombre" required>
+                <input type="email" name="email" placeholder="Tu correo" required>
+                <textarea name="mensaje" rows="4" placeholder="Describe lo observado en la zona verde..." required></textarea>
+                <button type="submit" class="btn-report">Enviar Reporte Ambiental</button>
+            </form>
+        </div>
     </div>
 
-    <div id="reporte" class="section">
-        <h2>Reportar Estado del Mangle</h2>
-        <form action="https://formspree.io/f/xnjyzndn" method="POST">
-            <input type="text" name="nombre" placeholder="Tu nombre" required><br><br>
-            <textarea name="mensaje" placeholder="Describe el problema..." required></textarea><br><br>
-            <button type="submit">Enviar Reporte</button>
-        </form>
-    </div>
 </body>
 </html>
