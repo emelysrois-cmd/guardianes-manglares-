@@ -22,6 +22,27 @@
             background: white; padding: 40px; border-radius: 25px; 
             margin: 30px 0; box-shadow: 0 10px 30px rgba(0,77,64,0.1); 
             border-top: 5px solid #009688;
+            position: relative; /* Para la imagen absoluta */
+        }
+
+        /* Estilos de la Tarjeta del Manual */
+        .manual-card {
+            display: flex; /* Para alinear texto e imagen */
+            align-items: center;
+            gap: 20px; /* Espacio entre texto e imagen */
+        }
+
+        .manual-content {
+            flex: 1; /* El texto ocupa el espacio restante */
+        }
+
+        /* Estilos de la Imagen */
+        .img-manglar-manual {
+            width: 150px; /* Tamaño de la imagen */
+            height: 150px;
+            object-fit: cover; /* Recorte inteligente */
+            border-radius: 15px; /* Bordes redondeados */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombra suave */
         }
 
         /* Botón de Descarga Estilo Neón/Vibrante */
@@ -30,6 +51,7 @@
             color: white; padding: 18px 35px; text-decoration: none; 
             border-radius: 50px; display: inline-block; font-weight: 600; 
             transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 20px;
         }
         .btn-download:hover { transform: scale(1.05); box-shadow: 0 5px 15px rgba(0,150,136,0.4); }
 
@@ -66,11 +88,13 @@
     </header>
 
     <div class="container">
-        <div class="section">
-            <h2>📖 Manual del Guardián Ambiental</h2>
-            <p>Descarga la guía esencial para la preservación de nuestro entorno natural.</p>
-            <a href="manual.pdf" class="btn-download" download>⬇️ Descargar Manual PDF</a>
-            <img src="https://images.unsplash.com/photo-1544551763-47a184230181?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="img-zona" alt="Manglar">
+        <div class="section manual-card">
+            <div class="manual-content">
+                <h2>📖 Manual del Guardián Ambiental</h2>
+                <p>Descarga la guía esencial para la preservación de nuestro entorno natural.</p>
+                <a href="manual.pdf" class="btn-download" download>⬇️ Descargar Manual PDF</a>
+            </div>
+            <img src="https://images.unsplash.com/photo-1544551763-47a184230181?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="img-manglar-manual" alt="Manglar">
         </div>
 
         <div id="reporte" class="section" style="background-color: #e0f2f1;">
@@ -88,3 +112,4 @@
 
 </body>
 </html>
+          
